@@ -1,0 +1,229 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: url('aleeksibg3.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header and Navigation */
+header {
+    width: 100%;
+    background-color: rgba(52, 58, 64, 0.8); /* Transparent black */
+    color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Adds a glass effect */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    color: #00ffcc; /* Neon green */
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f8f9fa;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+    transform: scale(1.1);
+}
+
+/* Introduction Section with Image */
+.intro-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.5);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+}
+
+.intro-text {
+    max-width: 600px;
+    color: #d1e8e2;
+}
+
+/* Sections Styling */
+.content-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+    border-radius: 8px;
+    transition: transform 0.3s;
+    color: #d1e8e2;
+    backdrop-filter: blur(10px); /* Adds glassmorphism effect */
+}
+
+.content-section:hover {
+    transform: scale(1.03);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(52, 58, 64, 0.8);
+    color: #f8f9fa;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.footer-text {
+    color: #d1e8e2;
+}
+
+/* Animations */
+header, .content-section, footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Neon Glow Animation */
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+}
+
+/*Mobile Responsive*/
+@media screen and (max-width: 480px) {
+    .intro-container {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: auto;
+    }
+
+    .intro-title {
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+
+    .intro-description {
+        font-size: 14px;
+    }
+
+    #projects h2, #learning h2 {
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+
+    #projects p, #learning p {
+        font-size: 14px;
+    }
+}
+
+/* Projects Section Styling */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-block {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 255, 204, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+    padding: 15px;
+    width: calc(30% - 20px); /* Adjust block width for consistent layout */
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project-block:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+    object-fit: cover; /* Ensures images fit within blocks */
+}
+
+.project-block h3 {
+    margin: 10px 0;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.project-block p {
+    font-size: 0.9rem;
+    color: #d1e8e2;
+}
